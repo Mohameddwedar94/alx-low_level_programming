@@ -1,1 +1,1 @@
-third task for C
+C more function
