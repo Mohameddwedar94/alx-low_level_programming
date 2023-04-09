@@ -15,7 +15,11 @@ unsigned long int _power(unsigned int base, unsigned int pow)
 		num *= base;
 	return (num);
 }
-
+/**
+ * print_binary - prints the binary representation of a number
+ * @n: num of prented
+ * Return: void
+ */
 void print_binary(unsigned long int n)
 {
 	unsigned long int de v, result;
