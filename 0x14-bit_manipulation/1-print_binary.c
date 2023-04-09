@@ -22,7 +22,7 @@ unsigned long int _power(unsigned int base, unsigned int pow)
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int de v, result;
+	unsigned long int dev, result;
 	char flag;
 
 	flag = 0;
