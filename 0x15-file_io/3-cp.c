@@ -75,6 +75,14 @@ void check100(int check, int fd)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
+}
+/**
+ * main - opies the content of a file to another file.
+ * @argc: number of arguments passed
+ * @argv: array of pointers to the arguments
+ *
+ * Return: 0 on success
+ */
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, close_to, close_from;
@@ -104,4 +112,3 @@ int main(int argc, char *argv[])
 	check100(close_from, fd_from);
 	return (0);
 }
-
