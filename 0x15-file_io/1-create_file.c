@@ -9,21 +9,21 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int m,d, dwe = 0;
+	int o, w, len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		for (dwe = 0; text_content[dwe];)
+		for (len = 0; text_content[len];)
 			len++;
 	}
 
-	m = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	d = write(m, text_content, dwe);
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(o, text_content, len);
 
-	if (m == -1 || d == -1)
+	if (o == -1 || w == -1)
 		return (-1);
 
 	close(o);
