@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _strlen - finds the length of the string
+ * _strlen - finds the length of a string
  * @str: pointer to the string
  *
  * Return: length of the string
  */
-size_t _strlen(char *dwr)
+size_t _strlen(char *str)
 {
 	size_t i;
 
-	for (i = 0; dwr[i]; i++)
+	for (i = 0; str[i]; i++)
 		;
 	return (i);
 }
@@ -24,17 +24,17 @@ size_t _strlen(char *dwr)
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int md;
+	int fd;
 	ssize_t len;
 
 	if (filename == NULL)
 		return (-1);
-	md = open(filename, O_WRONLY | O_APPEND);
-	if (md == -1)
+	fd = open(filename, O_WRONLY | O_APPEND);
+	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
 		len = write(fd, text_content, _strlen(text_content));
-	close(md);
+	close(fd);
 	if (len == -1)
 		return (-1);
 	return (1);
