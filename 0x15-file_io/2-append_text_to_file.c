@@ -25,7 +25,7 @@ size_t _strlen(char *dwe)
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int mado;
-	ssize_t dr;
+	ssize_t len;
 
 	if (filename == NULL)
 		return (-1);
@@ -33,9 +33,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (mado == -1)
 		return (-1);
 	if (text_content != NULL)
-		dr = write(mado, text_content, _strlen(text_content));
+		len = write(mado, text_content, _strlen(text_content));
 	close(mado);
-	if (dr == -1)
+	if (len == -1)
 		return (-1);
 	return (1);
 }
