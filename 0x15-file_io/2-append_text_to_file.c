@@ -6,11 +6,11 @@
  *
  * Return: length of the string
  */
-size_t _strlen(char *str)
+size_t _strlen(char *dr)
 {
-	size_t i;
+	size_t m;
 
-	for (i = 0; str[i]; i++)
+	for (m = 0; dr[m]; m++)
 		;
 	return (i);
 }
@@ -24,18 +24,18 @@ size_t _strlen(char *str)
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t len;
+	int mado;
+	ssize_t dwe;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_APPEND);
+	mado = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
-		len = write(fd, text_content, _strlen(text_content));
-	close(fd);
-	if (len == -1)
+		dwe = write(mado, text_content, _strlen(text_content));
+	close(mado);
+	if (dwe == -1)
 		return (-1);
 	return (1);
 }
