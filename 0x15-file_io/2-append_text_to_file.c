@@ -12,7 +12,7 @@ size_t _strlen(char *dr)
 
 	for (m = 0; dr[m]; m++)
 		;
-	return (i);
+	return (m);
 }
 
 /**
