@@ -8,7 +8,7 @@
  */
 size_t _strlen(char *dr)
 {
-	size_t i;
+	size_t m;
 
 	for (m = 0; dr[i]; m++)
 		
@@ -33,7 +33,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (mado == -1)
 		return (-1);
 	if (text_content != NULL)
-		dwe = write(mad, text_content, _strlen(text_content));
+		dwe = write(mado, text_content, _strlen(text_content));
 	close(mado);
 	if (dwe == -1)
 		return (-1);
