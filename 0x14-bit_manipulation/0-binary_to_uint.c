@@ -6,24 +6,24 @@
  *
  * Return:converted number, or 0
  */
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *m)
 {
-	int i;
-	unsigned int j;
+	int d;
+	unsigned int f;
 
-	j = 0;
-	if (!b)
+	f = 0;
+	if (!m)
 		return (0);
-	for (i = 0; b[i] != '\0'; i++)
+	for (d = 0; m[d] != '\0'; d++)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (m[d] != '0' && m[d] != '1')
 			return (0);
 	}
-	for (i = 0; b[i] != '\0'; i++)
+	for (d = 0; m[d] != '\0'; d++)
 	{
-		j <<= 1;
-		if (b[i] == '1')
-			j += 1;
+		f <<= 1;
+		if (m[d] == '1')
+			f += 1;
 	}
-	return (j);
+	return (f);
 }
