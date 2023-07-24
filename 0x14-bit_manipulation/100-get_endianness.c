@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_endiannes - checks the endianness
+ * get_endianness - checks the endianness
  *
  * Return: 0 if big endian, 1 if little endian
  */
@@ -10,7 +10,7 @@ int get_endianness(void)
 	char *d;
 
 	m = 1;
-	d = (char *)&i;
+	d = (char *)&m;
 
 	return (*d);
 }
