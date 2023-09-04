@@ -10,7 +10,7 @@
  */
 void check97(int argc)
 {
-	if (dwedar != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
