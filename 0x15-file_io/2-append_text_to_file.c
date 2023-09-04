@@ -9,7 +9,7 @@
  */
 size_t _strlen(char *str)
 {
-	size_t m>x;
+	size_t m;
 
 	for (m = 0; str[m]; m++)
 		;
